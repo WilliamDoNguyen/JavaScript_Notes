@@ -1,0 +1,205 @@
+JavaScript
+______________________________________________________________________________________________________
+//
+- comments
+
+//
+JAVA, C, and Swift are statically typed languages
+
+//
+JavaScript, Python, and Ruby are dynamically typed
+
+console.log()
+// display in the console
+
+var abc
+// stating a variable
+
+abc++/abc--
+// abc + 1/ abc - 1
+
+abc +=/-= 20
+// abc + 20/ abc - 20
+
+var arr = []
+// initializes a variable to be anything (i.e. number, string, array)
+
+console.log(arr.length)
+// gives array length
+
+arr.push()
+// appends to the end
+
+arr.pop()
+// removes from the end
+
+function something(){
+
+    return variable
+}
+// defining a function
+
+
+//objects
+var Dany = {
+    first_name: 'Daenerys',
+    last_name: 'Targaryen',
+    age: 22,
+    allegiance: 'House Targaryen',
+    ancestry: 'Valyrian',
+    titles: [
+        'Queen of the Andals, the Rhoynar and the First Men',
+        'Lady Regent of the Seven Kingdoms',
+        'Protector of the Realm',
+        'Khaleesi of the Great Grass Sea',
+        'Breaker of Chains',
+        'Mother of Dragons',
+        'Queen of Meereen'
+    ]
+}
+var Dany = {
+    first_name: 'Daenerys',
+    last_name: 'Targaryen',
+    age: 22,
+    allegiance: 'House Targaryen',
+    ancestry: 'Valyrian',
+    titles: [
+        'Queen of the Andals, the Rhoynar and the First Men',
+        'Lady Regent of the Seven Kingdoms',
+        'Protector of the Realm',
+        'Khaleesi of the Great Grass Sea',
+        'Breaker of Chains',
+        'Mother of Dragons',
+        'Queen of Meereen'
+    ]
+}
+
+//adding new arrays with a new key called snacks
+dojo.snacks = ['Fig Bars', 'Bagels', 'Popcorn', 'Apples'];
+
+//JavaScript allows you to add onto an array index by just targeting it which is more efficient
+//i.e.
+var arr = [1,2,3];
+arr[3] = 4;
+console.log(arr); // [1,2,3,4]
+
+//Anne's Notes on Objects
+var object1 = {
+//    key   : value
+    "fname" : "Anne",
+    "lname" : "Jurack",
+    "email" : "ajurack@codingdojo.com"
+}
+
+// To loop through objects, use a for-in loop and make sure to use bracket to loop up values:
+for (var banana in object1 ) {
+    key_count++
+    console.log( object1[ banana ] )
+}
+
+var object2 = {
+//    key   : value
+    "fname" : "Adrien",
+    "lname" : "Dion",
+    "email" : "adion@codingdojo.com"
+}
+
+// You can use brackets to look up values based on their key:
+console.log(object1["email"])
+console.log(object2["email"])
+// OR you can use dot notation:
+console.log(object1.email)
+console.log(object2.email)
+
+var array_of_objects = [
+    {
+        "fname": "Anne",
+        "lname": "Jurack",
+        "email": "ajurack@codingdojo.com"
+    },
+    {
+        "fname": "Adrien",
+        "lname": "Dion",
+        "email": "adion@codingdojo.com"
+    }
+]
+console.log( array_of_objects[1] ) // so this prints an ENTIRE object, so it IS an object
+console.log ( array_of_objects[1].email ) // so this prints only the email of that object
+
+// To loop through an array of objects, first use the regular array loop:
+for(var i = 0 ; i < array_of_objects.length ; i++ ) {
+    console.log( array_of_objects[i].fname , array_of_objects[i].lname)
+}
+
+// To loop through each object's key/values inside of the array:
+for(var i = 0 ; i < array_of_objects.length ; i++ ) {
+    for(var key in array_of_objects[ i ]) {
+        console.log( key , array_of_objects[ i ][ key ] )
+    }
+}
+
+Math.random() // 0-1
+Math.random() * number // 0*number - 1*number
+
+Math.round()
+// normal rounding
+
+Math.ceil()
+// rounds up
+
+Math.floor()
+// rounds down
+
+
+______________________________________________________________________________________________________
+//Variables
+
+var teacher = "Nichole"
+var instructor = {
+	instruct: "Nichole",
+	age : 26,
+	hobs : ["gaming", "drawing", "sleeping"],
+	hunger : false
+}
+
+console.log(teacher)			//"Nichole"
+console.log(instructor.hob[1])		//"drawing"
+
+______________________________________________________________________________________________________
+//Syntatic Sugar
+
+//let
+
+for(let i = 0; i < 5; i++){
+	console.log(i);
+}
+// let makes it local to the scope it is in.
+// var makes it a global variable
+
+// const
+const num = 9
+
+//Destructuring
+var [hob1,,hob3] = hobbies //takes first and last and skips middle
+// must be equal or less than the array indeces
+
+// Rest/Spread
+var arr2 = [...arr] //... is the spread operator. In this case, copies arr.
+
+var { hobs : my_hobs } = instructor //copies hobs in instructor and changes the copy's name to my_hobs
+
+//Ternary
+
+var hungry = false
+hungry ? console.log("I am hungry") : console.log("I'm good")
+//truthy first then falsey
+//check hungry. If true, do this. If false, do this.
+
+//arrow function
+
+const feedMe = () => hungry ? hungry = false : hungry = true
+/defines the function
+//if hungry = true, set it to false. if false, set to true
+//if there is one parameter, you don't need parenthesis. Otherwise, you need parenthesis
+
+______________________________________________________________________________________________________
